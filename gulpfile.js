@@ -11,7 +11,7 @@ function html_file(callback){
 
   callback();
 };
-
+ 
 // task styles file
 function styles_files(callback){
   return gulp.src(('app/assets/css/main.css'))
