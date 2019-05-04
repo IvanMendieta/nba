@@ -1,9 +1,10 @@
 .teams-section{
   margin: auto;
   margin-top: 50px;
-  width: 500px;
+  width: 450px;
   background-color: $mainWhite;
   border: 1px solid $borderGrey;
+
 
   &__heading-top{
     border-bottom: 1px solid $borderGrey;
@@ -11,18 +12,35 @@
     clear: both;
     padding: 10px;
     font-family: arial, sans-serif, helvetica;
+    font-size: 0.9375rem;
+    background-color: $mainGrey;
   }
 
   &__sub-headings{
     padding: 10px;
     font-family: arial, sans-serif, helvetica;
-  }
+    overflow: hidden;
+    clear: both;
 
+    img{
+      float: left;
+      margin-right: 10px;
+      clear: both;
+    }
+  }
   &__datetime{
     text-align: center;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.9375rem;
     color: $subHeadings;
+    margin-bottom: 30px;
+  }
+
+
+  &__team-name{
+    margin-top: 20px;
+    font-size: 0.9375rem;
+    color: #484847;
   }
 
   &__left-col{
@@ -33,9 +51,22 @@
   &__right-col{
     float: right;
     color: $subHeadings;
+    overflow: hidden;
   }
 
+  &__scores{
+    float: right;
+  }
 
+  &__leading{
+    text-align: center;
+    clear: both;
+    overflow: hidden;
+  }
+
+  &__leading-heading{
+    font-size: 0.9375rem;
+  }
 
 
 }

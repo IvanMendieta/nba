@@ -373,6 +373,9 @@ img{
   background-position: center;
   background-size: cover;
 
+
+
+
 }
 
 .header-section__logo{
@@ -396,11 +399,9 @@ img{
 .teams-section{
   margin: auto;
   margin-top: 50px;
-  width: 500px;
+  width: 450px;
   background-color: #fff;
   border: 1px solid #d1d1cf;
-
-
 
 
 }
@@ -411,18 +412,35 @@ img{
     clear: both;
     padding: 10px;
     font-family: arial, sans-serif, helvetica;
+    font-size: 0.9375rem;
+    background-color: #e5e3e2;
   }
 
 .teams-section__sub-headings{
     padding: 10px;
     font-family: arial, sans-serif, helvetica;
+    overflow: hidden;
+    clear: both;
   }
+
+.teams-section__sub-headings img{
+      float: left;
+      margin-right: 10px;
+      clear: both;
+    }
 
 .teams-section__datetime{
     text-align: center;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.9375rem;
     color: #757573;
+    margin-bottom: 30px;
+  }
+
+.teams-section__team-name{
+    margin-top: 20px;
+    font-size: 0.9375rem;
+    color: #484847;
   }
 
 .teams-section__left-col{
@@ -433,4 +451,19 @@ img{
 .teams-section__right-col{
     float: right;
     color: #757573;
+    overflow: hidden;
+  }
+
+.teams-section__scores{
+    float: right;
+  }
+
+.teams-section__leading{
+    text-align: center;
+    clear: both;
+    overflow: hidden;
+  }
+
+.teams-section__leading-heading{
+    font-size: 0.9375rem;
   }
