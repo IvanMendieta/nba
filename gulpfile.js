@@ -3,6 +3,9 @@ var concat = require('gulp-concat');
 var postCss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssImport = require('postcss-import');
+var mixins = require('postcss-mixins');
+var nested = require('postcss-nested');
+var cssVars = require('postcss-simple-vars');
 var browser_Sync = require('browser-sync').create();
 
 // task index file
@@ -11,11 +14,11 @@ function html_file(callback){
 
   callback();
 };
- 
+
 // task styles file
 function styles_files(callback){
   return gulp.src(('app/assets/css/main.css'))
-  .pipe(postCss([cssImport, autoprefixer]))
+  .pipe(postCss([cssImport, mixins, nested, cssVars, autoprefixer]))
   .pipe(concat('stylesheets.css'))
   .pipe(gulp.dest('app/dist/build/css'))
   .pipe(browser_Sync.stream());

@@ -1,0 +1,24 @@
+.header-section{
+  background: url('../../../assets/img//banner.jpg');
+  background-position: center;
+  background-size: cover;
+
+  &__logo{
+    padding-top: 50px;
+  }
+
+  &__heading{
+    color: $mainGrey;
+    font-family: arial, sans-serif, helvetica;
+    padding: 60px 0;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    line-height: 50px;
+    letter-spacing: 5px;
+  }
+
+}
+
+.overlay{
+  background-color: rgba(0,0,0,0.6); /* Black background with opacity */
+}

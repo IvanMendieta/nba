@@ -1,0 +1,41 @@
+.teams-section{
+  margin: auto;
+  margin-top: 50px;
+  width: 500px;
+  background-color: $mainWhite;
+  border: 1px solid $borderGrey;
+
+  &__heading-top{
+    border-bottom: 1px solid $borderGrey;
+    overflow: hidden;
+    clear: both;
+    padding: 10px;
+    font-family: arial, sans-serif, helvetica;
+  }
+
+  &__sub-headings{
+    padding: 10px;
+    font-family: arial, sans-serif, helvetica;
+  }
+
+  &__datetime{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    color: $subHeadings;
+  }
+
+  &__left-col{
+    float: left;
+    color: #484847;
+  }
+
+  &__right-col{
+    float: right;
+    color: $subHeadings;
+  }
+
+
+
+
+}

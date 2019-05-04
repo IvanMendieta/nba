@@ -349,6 +349,88 @@ template {
   display: none;
 }
 
-#h1{
-  color: red;
+body{
+  background-color: #mainGrey;
 }
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-section{
+  background: url('../../../assets/img//banner.jpg');
+  background-position: center;
+  background-size: cover;
+
+}
+
+.header-section__logo{
+    padding-top: 50px;
+  }
+
+.header-section__heading{
+    color: #e5e3e2;
+    font-family: arial, sans-serif, helvetica;
+    padding: 60px 0;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    line-height: 50px;
+    letter-spacing: 5px;
+  }
+
+.overlay{
+  background-color: rgba(0,0,0,0.6); /* Black background with opacity */
+}
+
+.teams-section{
+  margin: auto;
+  margin-top: 50px;
+  width: 500px;
+  background-color: #fff;
+  border: 1px solid #d1d1cf;
+
+
+
+
+}
+
+.teams-section__heading-top{
+    border-bottom: 1px solid #d1d1cf;
+    overflow: hidden;
+    clear: both;
+    padding: 10px;
+    font-family: arial, sans-serif, helvetica;
+  }
+
+.teams-section__sub-headings{
+    padding: 10px;
+    font-family: arial, sans-serif, helvetica;
+  }
+
+.teams-section__datetime{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #757573;
+  }
+
+.teams-section__left-col{
+    float: left;
+    color: #484847;
+  }
+
+.teams-section__right-col{
+    float: right;
+    color: #757573;
+  }
