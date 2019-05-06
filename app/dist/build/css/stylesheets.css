@@ -427,6 +427,7 @@ img{
       float: left;
       margin-right: 10px;
       clear: both;
+      overflow: hidden;
     }
 
 .teams-section__datetime{
@@ -437,8 +438,19 @@ img{
     margin-bottom: 30px;
   }
 
+.teams-section__team1{
+    border-bottom: 1px solid #e5e3e2;
+    padding-top: 5px;
+    clear: both;
+  }
+
+.teams-section__team2{
+    border-bottom: 1px solid #e5e3e2;
+    padding-top: 15px;
+  }
+
 .teams-section__team-name{
-    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 0.9375rem;
     color: #484847;
   }
@@ -456,6 +468,7 @@ img{
 
 .teams-section__scores{
     float: right;
+    font-size: 1.1rem;
   }
 
 .teams-section__leading{
@@ -467,3 +480,31 @@ img{
 .teams-section__leading-heading{
     font-size: 0.9375rem;
   }
+
+.our-buttons{
+  overflow: hidden;
+  clear: both;
+
+
+}
+
+.our-buttons__container{
+    background-color: #e5e3e2;
+    width: 100%;
+    text-align: center;
+
+  }
+
+.our-buttons__container button{
+      border: none;
+      padding: 5px 15px;
+      margin: 20px 10px;
+      font-family: arial, sans-serif, helvetica;
+      font-size: 1rem;
+      border: 1px solid #d1d1cf;
+      cursor: pointer;
+      background-color: #f1794b;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 3px;
+    }

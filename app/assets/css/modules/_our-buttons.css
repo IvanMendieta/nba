@@ -1,0 +1,28 @@
+.our-buttons{
+  overflow: hidden;
+  clear: both;
+
+  &__container{
+    background-color: $mainGrey;
+    width: 100%;
+    text-align: center;
+
+
+    button{
+      border: none;
+      padding: 5px 15px;
+      margin: 20px 10px;
+      font-family: arial, sans-serif, helvetica;
+      font-size: 1rem;
+      border: 1px solid $borderGrey;
+      cursor: pointer;
+      background-color: #f1794b;
+      color: $mainWhite;
+      font-weight: bold;
+      border-radius: 3px;
+    }
+
+  }
+
+
+}

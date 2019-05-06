@@ -26,6 +26,7 @@
       float: left;
       margin-right: 10px;
       clear: both;
+      overflow: hidden;
     }
   }
   &__datetime{
@@ -36,9 +37,17 @@
     margin-bottom: 30px;
   }
 
-
+  &__team1{
+    border-bottom: 1px solid $mainGrey;
+    padding-top: 5px;
+    clear: both;
+  }
+  &__team2{
+    border-bottom: 1px solid $mainGrey;
+    padding-top: 15px;
+  }
   &__team-name{
-    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 0.9375rem;
     color: #484847;
   }
@@ -56,6 +65,7 @@
 
   &__scores{
     float: right;
+    font-size: 1.1rem;
   }
 
   &__leading{

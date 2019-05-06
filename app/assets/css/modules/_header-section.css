@@ -3,6 +3,7 @@
   background-position: center;
   background-size: cover;
 
+
   &__logo{
     padding-top: 50px;
   }
@@ -21,9 +22,6 @@
 
 
 }
-
-
-
 
 .overlay{
   background-color: rgba(0,0,0,0.6); /* Black background with opacity */
