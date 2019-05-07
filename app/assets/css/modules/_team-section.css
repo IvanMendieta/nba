@@ -1,6 +1,6 @@
 .teams-section{
   margin: auto;
-  margin-top: 50px;
+  margin-top: 15px;
   width: 450px;
   background-color: $mainWhite;
   border: 1px solid $borderGrey;
@@ -72,10 +72,22 @@
     text-align: center;
     clear: both;
     overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
   &__leading-heading{
     font-size: 0.9375rem;
+
+    &--final-lead{
+      font-size: 1rem;
+      color: $subHeadings;
+    }
+  }
+
+
+  &--wongame{
+    color: $leadingScore;
   }
 
 

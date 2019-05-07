@@ -398,7 +398,7 @@ img{
 
 .teams-section{
   margin: auto;
-  margin-top: 50px;
+  margin-top: 15px;
   width: 450px;
   background-color: #fff;
   border: 1px solid #d1d1cf;
@@ -475,10 +475,21 @@ img{
     text-align: center;
     clear: both;
     overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
 .teams-section__leading-heading{
     font-size: 0.9375rem;
+  }
+
+.teams-section__leading-heading--final-lead{
+      font-size: 1rem;
+      color: #757573;
+    }
+
+.teams-section--wongame{
+    color: #ff6c4f;
   }
 
 .our-buttons{
