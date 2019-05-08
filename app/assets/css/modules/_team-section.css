@@ -85,6 +85,25 @@
     }
   }
 
+  &__team1{
+    clear: both;
+    overflow: hidden;
+  }
+  &__team2{
+    clear: both;
+    overflow: hidden;
+  }
+
+  &__points{
+    float: right;
+    padding: 5px 0;
+  }
+  &__pointers{
+    font-family: arial, sans-serif, helvetica;
+    font-weight: bold;
+    font-size: 0.7375rem;
+  }
+
 
   &--wongame{
     color: $leadingScore;

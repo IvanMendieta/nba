@@ -488,6 +488,27 @@ img{
       color: #757573;
     }
 
+.teams-section__team1{
+    clear: both;
+    overflow: hidden;
+  }
+
+.teams-section__team2{
+    clear: both;
+    overflow: hidden;
+  }
+
+.teams-section__points{
+    float: right;
+    padding: 5px 0;
+  }
+
+.teams-section__pointers{
+    font-family: arial, sans-serif, helvetica;
+    font-weight: bold;
+    font-size: 0.7375rem;
+  }
+
 .teams-section--wongame{
     color: #ff6c4f;
   }
