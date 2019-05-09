@@ -42,6 +42,7 @@ document.getElementById('bucks-add').addEventListener('click', function(){
       wonGame.classList.add('teams-section--wongame');
       document.getElementById('leading').textContent = 'Bucks won the game!';
       gamePlaying = false;
+      totalLeadBucks();
 
     }
     // We display the scores add to the count total to the DOM element.
@@ -50,6 +51,16 @@ document.getElementById('bucks-add').addEventListener('click', function(){
   }
 
 });
+var totalBucksLeadPoints = 0;
+
+function totalLeadBucks(){
+
+  totalBucksLeadPoints++;
+  document.getElementById('buckstotal').textContent = totalBucksLeadPoints;
+
+
+};
+
 
 // get celtic scores
 function celticFinalPoints(value){
@@ -79,6 +90,8 @@ document.getElementById('celtic-add').addEventListener('click', function(){
       wonGame.classList.add('teams-section--wongame');
       document.getElementById('leading').textContent = 'The Celtics won the game!';
       gamePlaying = false;
+      totalLeadCeltics();
+
     }
 
     // We display the scores add to the count total to the DOM element.
@@ -88,6 +101,17 @@ document.getElementById('celtic-add').addEventListener('click', function(){
 
 
 });
+
+
+var totalCelticsLeadPoints = 0;
+
+function totalLeadCeltics(){
+
+  totalCelticsLeadPoints++;
+  document.getElementById('celticstotal').textContent = totalCelticsLeadPoints;
+
+
+};
 
 
 // Leading scores function
