@@ -26,13 +26,13 @@ document.getElementById('bucks-add').addEventListener('click', function(){
     var pointsBucks = document.getElementById('bucks-scores');
     // random generate scores
     var scores = Math.floor(Math.random() * 3) + 1;
-    console.log(scores);
+    // console.log(scores);
     //if is a 1 add 1 to it, to make it 2
     if( scores === 1 ){
       scores = scores + 1;  // gets a 2 or a 3
     }
     document.getElementById('bucks-points').textContent = scores + ' ' + 'Points';
-    console.log(scores); //temp
+    // console.log(scores); //temp
 
     // Adding scores
     countBucks = countBucks + scores;
@@ -43,21 +43,22 @@ document.getElementById('bucks-add').addEventListener('click', function(){
       document.getElementById('leading').textContent = 'Bucks won the game!';
       gamePlaying = false;
       totalLeadBucks();
-
+      readLeads();
     }
     // We display the scores add to the count total to the DOM element.
      var mypoints = document.getElementById('bucks-scores').textContent = countBucks;
      return mypoints = bucksFinalPoints();
+
   }
 
 });
+
+
+//final lead points for bucks
 var totalBucksLeadPoints = 0;
-
 function totalLeadBucks(){
-
   totalBucksLeadPoints++;
-  document.getElementById('buckstotal').textContent = totalBucksLeadPoints;
-
+   return document.getElementById('buckstotal').textContent = totalBucksLeadPoints;
 
 };
 
@@ -91,7 +92,7 @@ document.getElementById('celtic-add').addEventListener('click', function(){
       document.getElementById('leading').textContent = 'The Celtics won the game!';
       gamePlaying = false;
       totalLeadCeltics();
-
+      readLeads();
     }
 
     // We display the scores add to the count total to the DOM element.
@@ -99,27 +100,20 @@ document.getElementById('celtic-add').addEventListener('click', function(){
      return mypoints = celticFinalPoints();
   }
 
-
 });
 
-
+//final lead points for celtics
 var totalCelticsLeadPoints = 0;
-
 function totalLeadCeltics(){
-
-  totalCelticsLeadPoints++;
-  document.getElementById('celticstotal').textContent = totalCelticsLeadPoints;
-
-
+    totalCelticsLeadPoints++;
+    document.getElementById('celticstotal').textContent = totalCelticsLeadPoints;
 };
-
 
 // Leading scores function
 function leadingScores(){
-
   //labels
-  var bucks = "Bucks!";
-  var celtic = 'Celtics!';
+   var bucks = "Bucks!";
+   var celtic = 'Celtics!';
 
   // call the functions warriors and hornets with their corresponding points.
   var totabucks = bucksFinalPoints();
@@ -135,9 +129,23 @@ function leadingScores(){
       document.getElementById('leading').textContent = bucks + ' and the  ' + celtic + ' are tie';
     }
 
-
 };
 document.getElementById('total').addEventListener('click', leadingScores);
+
+// read the final scores leads.
+function readLeads(){
+   var bucks = document.getElementById('buckstotal').textContent;
+   var celtic = document.getElementById('celticstotal').textContent;
+
+  if( Number(bucks) > Number(celtic) ){
+    document.getElementById('final-lead').textContent = ' Bucks Leads';
+  }else if ( bucks < celtic ){
+    document.getElementById('final-lead').textContent = ' Celtic Leads';
+  }else{
+    document.getElementById('final-lead').textContent = ' Tie Game';
+  }
+
+};
 
 // reset all DOM elements
 function resetDom(){
@@ -168,3 +176,14 @@ function resetDom(){
 };
 // reset all DOM fields
 document.getElementById('reset').addEventListener('click', resetDom);
+
+
+var sum;
+function addArg(firstArg, secondArg){
+
+    sum = Number(firstArg) + Number(secondArg);
+
+  console.log(sum);
+};
+
+addArg(5,7);
