@@ -82,6 +82,9 @@
     &--final-lead{
       font-size: 1rem;
       color: $subHeadings;
+      display: block;
+      transition-delay: 2s;
+
     }
   }
 
@@ -108,6 +111,28 @@
   &--wongame{
     color: $leadingScore;
   }
+
+  .fa-check{
+    color: #4f92ff;
+    opacity: 0;
+  }
+  .bucks-check.showOnWinBucks{
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    display: inline-block;
+  }
+
+  .celtics-check.showOnWinCeltics{
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    display: inline-block;
+  }
+
+
 
 
 }

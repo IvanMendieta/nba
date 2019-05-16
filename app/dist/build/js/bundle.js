@@ -2,15 +2,23 @@
 document.getElementById('bucks-scores').textContent = '0';
 document.getElementById('celtic-scores').textContent = '0';
 
+
+// flag for enable game.
+var gamePlaying = true;
 //reset counts sums to zero
 var countBucks = 0;
 var countCeltics = 0;
 
-// flag for enable game.
-var gamePlaying = true;
 
 // GameDay label on loading page
 document.getElementById('leading').textContent = 'Game to start';
+
+
+//final lead points for bucks
+var totalBucksLeadPoints = 0;
+//final lead points for celtics
+var totalCelticsLeadPoints = 0;
+
 
 // get bucks scores
 function bucksFinalPoints(value){
@@ -37,11 +45,15 @@ document.getElementById('bucks-add').addEventListener('click', function(){
     // Adding scores
     countBucks = countBucks + scores;
     //validate if scores are more than 30 points show style as redish
-    if( countBucks >= 30 ){
+    if( countBucks >= 5 ){
       var wonGame = document.getElementById('bucks-scores');
       wonGame.classList.add('teams-section--wongame');
       document.getElementById('leading').textContent = 'Bucks won the game!';
       gamePlaying = false;
+
+      var myCheck = document.querySelector('.bucks-check');
+      myCheck.classList.add('showOnWinBucks');
+
       totalLeadBucks();
       readLeads();
     }
@@ -54,8 +66,7 @@ document.getElementById('bucks-add').addEventListener('click', function(){
 });
 
 
-//final lead points for bucks
-var totalBucksLeadPoints = 0;
+
 function totalLeadBucks(){
   totalBucksLeadPoints++;
    return document.getElementById('buckstotal').textContent = totalBucksLeadPoints;
@@ -76,20 +87,22 @@ document.getElementById('celtic-add').addEventListener('click', function(){
   if( gamePlaying ){
     // random generate scores
     var scores = Math.floor(Math.random() * 3) + 1;
-    console.log(scores); //temp
     // if is a 1 add 1 to it, to make it 2
     if( scores === 1 ){
       scores = scores + 1;  // gets a 2 or a 3
     }
     document.getElementById('celtics-points').textContent = scores + ' ' + 'Points';
-    console.log(scores); //temp
 
     countCeltics = countCeltics + scores;
     //validate if scores are more than 30 points show style as redish
-    if( countCeltics >= 30 ){
+    if( countCeltics >= 5 ){
       var wonGame = document.getElementById('celtic-scores');
       wonGame.classList.add('teams-section--wongame');
       document.getElementById('leading').textContent = 'The Celtics won the game!';
+
+      var myCheckCeltic = document.querySelector('.celtics-check');
+      myCheckCeltic.classList.add('showOnWinCeltics');
+
       gamePlaying = false;
       totalLeadCeltics();
       readLeads();
@@ -102,8 +115,7 @@ document.getElementById('celtic-add').addEventListener('click', function(){
 
 });
 
-//final lead points for celtics
-var totalCelticsLeadPoints = 0;
+
 function totalLeadCeltics(){
     totalCelticsLeadPoints++;
     document.getElementById('celticstotal').textContent = totalCelticsLeadPoints;
@@ -135,18 +147,23 @@ document.getElementById('total').addEventListener('click', leadingScores);
 // read the final scores leads.
 function readLeads(){
    var bucks = document.getElementById('buckstotal').textContent;
+   console.log(bucks);
    var celtic = document.getElementById('celticstotal').textContent;
-
-  if( Number(bucks) > Number(celtic) ){
-    document.getElementById('final-lead').textContent = ' Bucks Leads';
-  }else if ( bucks < celtic ){
-    document.getElementById('final-lead').textContent = ' Celtic Leads';
-  }else{
-    document.getElementById('final-lead').textContent = ' Tie Game';
-  }
+   // console.log(celtic);
+   if( bucks > celtic ){
+     document.getElementById('final-lead').textContent = ' Bucks Leads';
+   }if ( bucks < celtic ){
+     document.getElementById('final-lead').textContent = ' Celtic Leads';
+   }if ( bucks == 2 && celtic == 0  ){
+      document.getElementById('final-lead').textContent = ' Bucks won the Serie';
+   }if ( bucks == 2 && celtic == 1  ){
+      document.getElementById('final-lead').textContent = ' Bucks won the Serie';
+    }if ( bucks == celtic ){
+      document.getElementById('final-lead').textContent = ' Serie its tie';
+    }
 
 };
-
+readLeads();
 // reset all DOM elements
 function resetDom(){
   // flag for enable game.
@@ -173,10 +190,26 @@ function resetDom(){
   document.getElementById('bucks-points').textContent = '0' + ' ' + 'Points';
   document.getElementById('celtics-points').textContent = '0' + ' ' + 'Points';
 
+
+  var myBcuksCeltic = document.querySelector('.bucks-check');
+  var myCheckCeltic = document.querySelector('.celtics-check');
+
+  myBcuksCeltic.classList.remove('showOnWinBucks');
+  myCheckCeltic.classList.remove('showOnWinCeltics');
+
 };
 // reset all DOM fields
 document.getElementById('reset').addEventListener('click', resetDom);
 
+
+
+
+
+
+
+
+/*
+// pending from forum free code camp
 
 var sum;
 function addArg(firstArg, secondArg){
@@ -187,3 +220,5 @@ function addArg(firstArg, secondArg){
 };
 
 addArg(5,7);
+
+*/
